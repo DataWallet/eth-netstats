@@ -76,6 +76,16 @@ module.exports = function(grunt) {
 			cleanup_js_lite: ['dist-lite/js/*.*', '!dist-lite/js/netstats.*'],
 			cleanup_css_lite: ['dist-lite/css/*.css', '!dist-lite/css/netstats.*.css']
 		},
+		watch: {
+	      css: {
+	        files: "src/css/*.css",
+	        tasks: "build"
+	      },
+	      jade: {
+	        files: "src/views/*.jade",
+	        tasks: "build"
+	      }
+	    },
 		jade: {
 			build: {
 				options: {
@@ -277,4 +287,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('lite', ['clean:build_lite', 'clean:cleanup_js_lite', 'clean:cleanup_css_lite', 'jade:build_lite', 'copy:build_lite', 'cssmin:build_lite', 'concat:vendor_lite', 'concat:scripts_lite', 'uglify:app_lite', 'concat:netstats_lite', 'concat:css_lite', 'clean:cleanup_js_lite', 'clean:cleanup_css_lite']);
 	grunt.registerTask('build',   'default');
 	grunt.registerTask('all',   ['default', 'lite']);
+	grunt.loadNpmTasks("grunt-contrib-watch");
 };

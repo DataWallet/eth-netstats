@@ -1,13 +1,27 @@
 html {
 	width: 100%;
 }
+::-webkit-scrollbar {
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  height: 8px;
+  width: 8px;
+}
 
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 4px;
+}
 body {
 	width: 100%;
-	min-width: 1900px;
-	font-smooth: auto;
+	min-width: 100%;
+	font-family: "GT America", -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-rendering: optimizeLegibility;
+	font-kerning: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-size: 14px;
+	background: #151515;
 }
 
 table td {
@@ -75,12 +89,13 @@ table td {
 }
 
 .container-fluid {
-	padding-left: 30px;
-	padding-right: 30px;
+	/*padding-left: 30px;*/
+	/*padding-right: 30px;*/
 }
 
 .stat-holder {
-	background: #090909;
+	/*background: #090909;*/
+	background: #151515;
 	border: 1px solid rgba(255,255,255,0.05);
 }
 
@@ -91,12 +106,12 @@ table td {
 
 .big-info .icon-full-width i {
 	display: block;
-	width: 85px;
-	height: 70px;
-	font-size: 70px;
-	line-height: 70px;
-	margin-right: 15px;
-	margin-left: -15px;
+	width: 32px;
+	height: 64px;
+	font-size: 32px;
+	line-height: 64px;
+	/*margin-right: 15px;*/
+	/*margin-left: -15px;*/
 }
 
 .big-info span.small-title,
@@ -107,7 +122,7 @@ table td {
 span.small-title,
 div.small-title-miner {
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 11px;
 	line-height: 20px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -127,9 +142,8 @@ span.small-title span.small {
 .big-info .big-details {
 	display: block;
 	font-weight: 200;
-	font-size: 50px;
-	line-height: 55px;
-	letter-spacing: -4px;
+	font-size: 40px;
+	line-height: 1;
 	word-spacing: nowrap !important;
 }
 
@@ -139,8 +153,8 @@ span.small-title span.small {
 
 .big-info .big-details-holder {
 	position: absolute;
-	top: 15px;
-	left: 99px;
+	top: 16px;
+	left: 24px;
 }
 
 .big-info.chart {
@@ -210,7 +224,7 @@ span.small-title span.small {
 }
 
 .second-row .box {
-	height: 40px;
+	/*height: 40px;*/
 	line-height: 24px !important;
 	padding: 5px 15px;
 }
@@ -237,6 +251,8 @@ span.small-title span.small {
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: auto;
 	float: right;
+	font-size: 13px;
+	display: block;
 }
 
 .second-row .box .small-value {
@@ -248,6 +264,17 @@ span.small-title span.small {
 	top: 10px;
 }
 
+.stats-table{
+	overflow-x: auto;
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohidsing-scrollbar;
+	padding: 0 16px;
+}
+
+table{
+	width: 100%;
+}
 table i {
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: auto;
@@ -256,6 +283,7 @@ table i {
 table th,
 table td {
 	border-color: #222 !important;
+	padding: 8px;
 }
 
 table td {
